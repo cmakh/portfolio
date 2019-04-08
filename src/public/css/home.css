@@ -1,0 +1,39 @@
+body {
+	background-color: white;
+	color: black;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.photography-div {
+	opacity: 0;
+}
+
+.photography-title {
+	font-size: 100px;
+	padding-top: 100px;
+	font-family: adobe-gothic-std, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	
+}
+
+#parallax-container {
+	display: block;
+	height: 750px;
+	/* This height can be adjusted here and below */
+}
+
+#parallax-container div {
+	position: absolute;
+	top: 0;
+	background-position: center !important;
+	transform: translateY(0px);
+	height: 750px;
+	/* Keep this the same height as above */
+	width: 100%;
+}
+
+#content {
+	position: relative;
+}

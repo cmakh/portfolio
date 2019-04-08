@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./css/home.css" />
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		(function (d) {
+			var config = {
+					kitId: 'cgq6cyh',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function () {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function () {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
+
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="parallax-container">
+		<div style="background: url('./assets/just_cooper.png') no-repeat; z-index: 1;" class="cooper" id="cooper">
+
+		</div>
+		<div style="background: url('./assets/trans.png') no-repeat; opacity: 1;" class="top">
+			<div class="container">
+
+			</div>
+		</div>
+		<div style="background: url([third-layer-image-url]);"></div>
+		<!-- Continue to add any other layer images -->
+	</div>
+
+	<div id="content container-fluid">
+		<div class="photography-div">
+			<div class="row">
+				<div class="col-4"></div>
+				<div class="col-8">
+					<h1 class="photography-title">Photograpgy</h1>
+				</div>
+			</div>
+		</div>
+		<h3>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</h3>
+
+	</div>
+
+	<script>
+		window.addEventListener('scroll', () => {
+			let parent = document.getElementById('parallax-container');
+			let children = parent.getElementsByTagName('div');
+			for (let i = 0; i < children.length; i++) {
+				children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
+			}
+		}, false)
+	</script>
+	<script>
+		var lastScrollTop = 0;
+		$(window).scroll(function () {
+			$(".top").css("opacity", 1 - $(window).scrollTop() / 250);
+			$(".photography-div").css('opacity', 0 + $(window).scrollTop() / 250);
+			var st = $(window).scrollTop();
+			console.log(st)
+			if (st > lastScrollTop && lastScrollTop >= 500) return;
+			if (st > lastScrollTop) {
+				$('.cooper').animate({
+					top: '+=' + Math.abs(st - lastScrollTop)
+				}, 5);
+			} else {
+				$('.cooper').animate({
+					top: '-=' + Math.abs(st - lastScrollTop)
+				}, 5);
+			}
+			lastScrollTop = st;
+		});
+	</script>
+
+</body>
+
+</html>
