@@ -49,19 +49,22 @@
 
 <body>
 	<div id="parallax-container">
-		<div style="background: url('./assets/just_cooper.png') no-repeat; z-index: 1;" class="cooper" id="cooper">
-
+		<div>
+			<div style="background: url('./assets/just_cooper.png') no-repeat; z-index: 1;" class="cooper" id="cooper">
+			</div>
+			<div class="container top-info">
+				<h1 class="hi">Hi, I'm Cooper Makhijani</h1>
+			</div>
 		</div>
 		<div style="background: url('./assets/trans.png') no-repeat; opacity: 1;" class="top">
-			<div class="container">
 
-			</div>
 		</div>
 		<div style="background: url([third-layer-image-url]);"></div>
 		<!-- Continue to add any other layer images -->
 	</div>
 
 	<div id="content container-fluid">
+
 		<div class="photography-div">
 			<div class="row">
 				<div class="col-4"></div>
@@ -131,11 +134,15 @@
 			$(".photography-div").css('opacity', 0 + $(window).scrollTop() / 250);
 			var st = $(window).scrollTop();
 			console.log(st)
+			$(body).css({
+				backgroundColor: '#fffff'
+			})
 			if (st > lastScrollTop && lastScrollTop >= 500) return;
 			if (st > lastScrollTop) {
 				$('.cooper').animate({
 					top: '+=' + Math.abs(st - lastScrollTop)
 				}, 5);
+
 			} else {
 				$('.cooper').animate({
 					top: '-=' + Math.abs(st - lastScrollTop)
